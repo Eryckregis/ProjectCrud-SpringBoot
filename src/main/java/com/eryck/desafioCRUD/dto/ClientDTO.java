@@ -2,6 +2,7 @@ package com.eryck.desafioCRUD.dto;
 
 import com.eryck.desafioCRUD.entities.Client;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 
@@ -19,6 +20,7 @@ public class ClientDTO {
 
     private Double income;
 
+    @PastOrPresent(message = "A data não pode ser futura")
     private LocalDate birthDate;
 
     @Positive(message = " o preco precisa ser positivo")

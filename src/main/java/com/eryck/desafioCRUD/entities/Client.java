@@ -19,7 +19,6 @@ public class Client {
     private String cpf;
     private Double income;
 
-    @PastOrPresent(message = "A data não pode ser futura")
     private LocalDate birthDate;
     private Integer children;
 
